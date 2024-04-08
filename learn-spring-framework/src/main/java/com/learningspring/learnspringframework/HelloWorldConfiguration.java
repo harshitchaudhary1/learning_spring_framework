@@ -26,8 +26,22 @@ public class HelloWorldConfiguration {
 	public Person person2MethodCall() {
 		return new Person(name(), age(),address());
 	}
+	@Bean
+	public Person person3Parameters(String name , int age , Address address3) {
+		return new Person(name,age,address3);
+	}
+	
+	@Bean
+	public Person person4Parameters(String name , int age , Address address3) {
+		return new Person(name,age,address3);
+	}
+	
 	@Bean(name = "Address2")
-	public Address address() {
+	public Address address() { 
 		return new Address("Adarsh Nagar","Modinagar");
+	}
+	@Bean(name = "address3")
+	public Address address3() {
+		return new Address("Nek","Meerut");
 	}
 }
